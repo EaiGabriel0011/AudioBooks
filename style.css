@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(141deg 75% 15%),
+    hsl(141deg 75% 5%)
+  );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.container-aplicativo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.music-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#informacoes-faixa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+}
+
+#capitulo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#play-pause,
+#anterior,
+#proximo {
+  cursor: pointer;
+}
+
+#anterior,
+#proximo {
+  width: 40px;
+}
+
+#play-pause {
+  width: 60px;
+}
+
+.pause {
+  display: none;
+}
+
+.tocando .play {
+  display: none;
+}
+
+.tocando .pause {
+  display: block;
+}
+
+#container-botoes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#capa {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+#capa:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+#capa:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+#audio-capitulo {
+  display: none;
+}
+
+/* Estilos adicionais para melhorar a aparência */
+button:hover {
+  color: #1db954;
+  transition: color 0.3s ease;
+}   
+button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  #anterior,
+  #proximo {
+    width: 30px;
+  }
+
+  #play-pause {
+    width: 50px;
+  }
+}
+/* Estilos para telas maiores */
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  #anterior,
+  #proximo {
+    width: 50px;
+  }
+
+  #play-pause {
+    width: 70px;
+  }
+}
+/* Estilos para tablets */
+@media (min-width: 600px) and (max-width: 1199px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  #anterior,
+  #proximo {
+    width: 40px;
+  }
+
+  #play-pause {
+    width: 60px;
+  }
+}
+/* Estilos para telas muito pequenas */
+@media (max-width: 400px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  #anterior,
+  #proximo {
+    width: 25px;
+  }
+
+  #play-pause {
+    width: 40px;
+  }
+}
+/* Estilos para telas muito grandes */
+@media (min-width: 1600px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  #anterior,
+  #proximo {
+    width: 60px;
+  }
+
+  #play-pause {
+    width: 80px;
+  }
+}
+/* Estilos para telas de altura reduzida */
+@media (max-height: 500px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #anterior,
+  #proximo {
+    width: 30px;
+  }
+
+  #play-pause {
+    width: 50px;
+  }
+}
+/* Estilos para telas de altura aumentada */
+@media (min-height: 800px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  #anterior,
+  #proximo {
+    width: 50px;
+  }
+
+  #play-pause {
+    width: 70px;
+  }
+}
+/* Estilos para telas com alta densidade de pixels */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    font-size: 1.3rem;
+  }
+
+  #anterior,
+  #proximo {
+    width: 45px;
+  }
+
+  #play-pause {
+    width: 65px;
+  }
+}
+/* Estilos para telas com baixa densidade de pixels */
+@media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 191dpi) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  #anterior,
+  #proximo {
+    width: 35px;
+  }
+
+  #play-pause {
+    width: 55px;
+  }
+}
+/* Estilos para impressão */
+@media print {
+  body {
+    font-size: 12pt;
+    color: black;
+    background: white;
+  }
+
+  #anterior,
+  #proximo,
+  #play-pause {
+    display: none;
+  }
+}
+/* Estilos para telas escuras */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(141deg 75% 15%),
+      hsl(141deg 75% 5%)
+    );
+    color: #ffffff;
+  }
+
+  button:hover {
+    color: #1db954;
+  }
+}
